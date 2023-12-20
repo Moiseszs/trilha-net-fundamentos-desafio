@@ -10,8 +10,13 @@ Console.WriteLine("Seja bem vindo ao sistema de estacionamento!\n" +
                   "Digite o preço inicial:");
 precoInicial = Convert.ToDecimal(Console.ReadLine());
 
+
+Console.WriteLine($"O preço inicial foi de: {precoInicial:C}");
+
 Console.WriteLine("Agora digite o preço por hora:");
 precoPorHora = Convert.ToDecimal(Console.ReadLine());
+
+Console.WriteLine($"O preço por hora é de: {precoPorHora:C}");
 
 // Instancia a classe Estacionamento, já com os valores obtidos anteriormente
 Estacionamento es = new Estacionamento(precoInicial, precoPorHora);
@@ -28,6 +33,8 @@ while (exibirMenu)
     Console.WriteLine("2 - Remover veículo");
     Console.WriteLine("3 - Listar veículos");
     Console.WriteLine("4 - Encerrar");
+    Console.WriteLine($"O preço inicial foi de: {precoInicial:C} e o preço por hora é de: {precoPorHora:C}");
+    Console.WriteLine("");
 
     switch (Console.ReadLine())
     {
